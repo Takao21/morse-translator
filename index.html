@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morse Code Translator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center text-uppercase" id="mainTitle">Morse Code Translator</h1>
+  </header>
+  <div class="container-fluid d-md-none" id="4buttons">
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-primary" onclick="addDot()">
+          .
+        </button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-primary" onclick="addDash()">
+          -
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-primary" onclick="letterSpace()">
+          space
+        </button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-info" onclick="wordSpace()">
+          /
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <br>
+    <h3 id="instruction">This app will translate your input from Morse to English (or) English to Morse.<br>Write your input and click Translate.</h3>
+    <textarea type="text" id="input-morse" class="bg-light" placeholder="Paste your Morse code or English sentence here"></textarea>
+    <div class="row" id="action-buttons">
+      <div class="col-12 text-center">
+        <button class="d-md-none btn btn-danger" onclick="deleteOne()">
+          Delete
+        </button>
+        <button class="btn btn-danger" onclick="deleteAll()">
+          Delete All
+        </button>
+        <button class="btn btn-success" onclick="translateMorse()" id="translate-btn">
+          Translate
+        </button>
+      </div>
+    </div>
+    <p class="lead help-block text-center">Use dot(.) for short signal, dash(-) for long signal, single space( ) for letter spacing, and spaced slash( / ) for word spacing.</p>
+  </div>
+  <p class="text-center">Translation: <button class="btn btn-success" onclick="copyClip()" id="copy-btn">Copy</button></p>
+  <hr class="bg-colorful">
+  <div class="container-fluid" id="output">
+    <br>
+  </div>
+  <hr class="bg-colorful">
+  <footer class="container-fluid text-center small">
+    A Portfolio Project by <span id="easter-egg" onclick="hooray()">Aung Kaung Khant (<span class="colorful1">T</span><span class="colorful2">A</span><span class="colorful3">K</span><span class="colorful4">A</span><span
+        class="colorful5">O</span>)</span> <br>
+    Written in <strong>HTML</strong>, <strong>CSS</strong>, <strong>BOOTSTRAP</strong> & <strong>JAVASCRIPT</strong><br>
+    <marquee id="version">Morse Code Translator - Version 1.3.1</marquee>
+  </footer>
+</body>
+
+</html>
